@@ -1,103 +1,241 @@
+# FelixFusion Help Center
+
+Welcome to the FelixFusion Help Center! This guide will help you navigate and maximize the potential of FelixFusion for automating your public procurement process.
+
 ---
-title: 'Development'
-description: 'Preview changes locally to update your docs'
+
+## Get Started
+
+### Introduction
+
+FelixFusion is designed to simplify and optimize your public procurement journey. This guide will help you set up your profile, leverage FelixFusion’s AI capabilities, and efficiently manage opportunities, proposals, and contracts.
+
 ---
 
-<Info>
-  **Prerequisite**: Please install Node.js (version 19 or higher) before proceeding.
-</Info>
+## User Guide
 
-Follow these steps to install and run Mintlify on your operating system:
+### Set Up
 
-**Step 1**: Install Mintlify:
+The first step to automating your public procurement process is setting up your profile and learning how to effectively interact with FelixFusion AI.
 
-<CodeGroup>
-  ```bash npm
-  npm i -g mintlify
-  ```
+---
 
-  ```bash yarn
-  yarn global add mintlify
-  ```
-</CodeGroup>
+### Profile Management
 
-**Step 2**: Navigate to the docs directory (where the `mint.json` file is located) and execute the following command:
+Easily manage your organization's profile settings to tailor FelixFusion’s features to your specific needs.
 
-```bash
-mintlify dev
-```
+The **Profile** section in FelixFusion allows you to set up and manage your organization's information, preferences, and team collaboration efficiently. Here's a detailed guide:
 
-A local preview of your documentation will be available at `http://localhost:3000`.
+#### 1. My Account
 
-### Custom Ports
+Manage your personal account details.
 
-By default, Mintlify uses port 3000. You can customize the port Mintlify runs on by using the `--port` flag. To run Mintlify on port 3333, for instance, use this command:
+- **Avatar**: Upload a profile picture (recommended size: 800x800 px, supported formats: JPG or PNG).  
+  ![My Account Screenshot](path-to-image)
+- **Name and Email**: Update your first name, last name, and email address.  
+- **Password Management**: Change your password by providing the old password, new password (minimum 8 characters), and confirmation.  
+- **Delete Account**: Permanently delete your account. This action is irreversible, so proceed with caution.  
 
-```bash
-mintlify dev --port 3333
-```
+---
 
-If you attempt to run Mintlify on a port that's already in use, it will use the next available port:
+#### 2. Overview
 
-```md
-Port 3000 is already in use. Trying 3001 instead.
-```
+Provide essential organizational details that FelixFusion uses to tailor the platform to your needs.
 
-## Mintlify Versions
+- **Organization Name**: Enter your company name.  
+- **Description**: Provide a brief summary of your organization’s activities, goals, and services (e.g., "General Trader, Electrical Equipment, Environment Sensors").  
+- **Unique Entity Identifier (UEI)**: Add your organization’s UEI.  
+- **CAGE Code**: If applicable, enter your Commercial and Government Entity (CAGE) Code.  
+- **Contact Information**:  
+  - First Name and Last Name  
+  - Email Address  
+  - Business Address (Street, City, State, Postal Code, and Country)  
 
-Please note that each CLI release is associated with a specific version of Mintlify. If your local website doesn't align with the production version, please update the CLI:
+Click **Save Changes** to update any modifications.  
+![Overview Screenshot](path-to-image)
 
-<CodeGroup>
-  ```bash npm
-  npm i -g mintlify@latest
-  ```
+---
 
-  ```bash yarn
-  yarn global upgrade mintlify
-  ```
-</CodeGroup>
+#### 3. Preferences
 
-## Validating Links
+Customize your search preferences and tendering criteria for optimized results.
 
-The CLI can assist with validating reference links made in your documentation. To identify any broken links, use the following command:
+- **NAICS Codes**: Enter the North American Industry Classification System (NAICS) codes relevant to your organization.  
+- **PSC Codes**: Add Product Service Codes (PSC) to refine your searches.  
+- **Set Aside Codes**: Indicate any small business set-aside designations (e.g., 8(a), HUBZone).  
+- **Notice Types**: Specify the types of opportunities you're looking for (e.g., Solicitation, Sources Sought).  
+- **Buyer Preferences**: Include or exclude specific government buyers or agencies.  
+- **Organization Type**: Indicate whether you’re a manufacturer or trader.  
+- **Company Size**: Choose the size of your company (0-10, 10-50, +50 employees).  
+- **Preferred Tenders**: Select the types of tenders you're interested in (Goods, Services, or Both).  
 
-```bash
-mintlify broken-links
-```
+Click **Save Changes** to confirm updates.  
+![Preferences Screenshot](path-to-image)
 
-## Deployment
+---
 
-<Tip>
-  Unlimited editors available under the [Pro
-  Plan](https://mintlify.com/pricing) and above.
-</Tip>
+#### 4. AI Questions
 
-If the deployment is successful, you should see the following:
+Use this section to upload files and configure preferences for interacting with FelixFusion’s AI.
 
-<Frame>
-  <img src="/images/checks-passed.png" style={{ borderRadius: '0.5rem' }} />
-</Frame>
+- **File Upload**: Drag and drop or upload files in TXT, PDF, or DOC formats.  
+- **Recently Uploaded Files**: View a list of recently uploaded documents, their file sizes, and actions (e.g., delete).  
+- **Tender Budget**: Specify your budget range for tender opportunities (<500k, 500k-1M, >1M).  
+- **Grant Funding**: Indicate the amount of grant funding you’re seeking.  
+- **Certifications**: Add any certifications your organization holds for better opportunity matching.  
+![AI Questions Screenshot](path-to-image)
 
-## Code Formatting
+---
 
-We suggest using extensions on your IDE to recognize and format MDX. If you're a VSCode user, consider the [MDX VSCode extension](https://marketplace.visualstudio.com/items?itemName=unifiedjs.vscode-mdx) for syntax highlighting, and [Prettier](https://marketplace.visualstudio.com/items?itemName=esbenp.prettier-vscode) for code formatting.
+#### 5. Payments
 
-## Troubleshooting
+Manage your subscription and payment history seamlessly.
 
-<AccordionGroup>
-  <Accordion title="Error: Could not load the &#x22;sharp&#x22; module using the darwin-arm64 runtime">
-    This may be due to an outdated version of node. Try the following:
+- **Plan Information**: View details of your active plan.  
+- **Payment History**: Review past payments, including activation date, amount, and expiration date.  
+![Payments Screenshot](path-to-image)
 
-    1. Remove the currently-installed version of mintlify: `npm remove -g mintlify`
+---
 
-    2. Upgrade to Node v19 or higher.
+#### 6. Team
 
-    3. Reinstall mintlify: `npm install -g mintlify`
-  </Accordion>
+Collaborate with your team and assign roles to manage projects effectively.
 
-  <Accordion title="Issue: Encountering an unknown error">
-    Solution: Go to the root of your device and delete the \~/.mintlify folder. Afterwards, run `mintlify dev` again.
-  </Accordion>
-</AccordionGroup>
+- **Add Members**: Invite team members by email.  
+- **View Team**: See a list of current members and their roles.  
+![Team Screenshot](path-to-image)
 
-Curious about what changed in the CLI version? [Check out the CLI changelog.](https://www.npmjs.com/package/mintlify?activeTab=versions)
+---
+
+## Felix AI
+
+### Overview
+
+Felix AI facilitates direct interaction with procurement opportunities by answering questions and providing contextual insights from solicitation files.
+
+### How to Use Felix AI
+
+1. Find an opportunity and click the **Felix AI** button to access the chat interface.  
+2. Type questions into the chatbox to receive answers with source citations.  
+3. Copy or follow up on AI-generated content for deeper insights.  
+
+---
+
+### Features
+
+- **Conversational Interaction**: Ask questions naturally.  
+- **Knowledge & Reasoning**: View FelixFusion AI’s reasoning behind responses.  
+- **Markdown Support**: Organize information into tables or lists.  
+- **Keyword Search**: Use shortcuts or the magnifying glass for document searches.  
+- **File Viewer Tools**: Zoom, navigate, and download files easily.  
+
+---
+
+### Thread Management
+
+- Share, view, or delete chat threads via the thread sidebar.  
+- Access full opportunity details or download related files.
+
+---
+
+## Search
+
+### Generative Search and Filters
+
+FelixFusion’s dynamic search capabilities ensure no opportunities are overlooked.
+
+#### Generative Search
+
+Fill out your organization profile for optimized results. Keywords, acronyms, and phrases are dynamically interpreted.
+
+#### Filter Search
+
+Apply advanced filters to refine search results:
+
+- **Status**: Active/In Progress or Closed.  
+- **Dates**: Posted or Due Date.  
+- **Buyers**: Government agency or department.  
+- **Codes**: NAICS, PSC, Set Aside.  
+
+#### Combining Filters
+
+Use multiple filters to narrow results further. Remove filters by clicking the “X” next to the tag.
+
+---
+
+## Schedules
+
+### Automated Search Queries
+
+Keep track of opportunities without manual searches by setting up automated schedules.
+
+#### Creating a Schedule
+
+1. Define your query, interval (daily/weekly), and filters.  
+2. FelixFusion will send results to your email at the chosen interval.
+
+#### Managing Schedules
+
+- Edit, run, or delete existing schedules.  
+- Refine schedules by adjusting filters like status, date, or classification codes.
+
+---
+
+## Proposal AI Agent
+
+### Streamlined Document Generation
+
+Respond quickly to government opportunities using the Proposal AI Agent.
+
+#### Creating Documents
+
+Start with a blank document, use the Outline Builder, or select a pre-defined template.
+
+---
+
+### Outline Builder
+
+- Generate and customize outlines dynamically.  
+- Adjust sections or add custom instructions for FelixFusion AI to generate content.
+
+---
+
+### Collaboration and Revision
+
+- Share documents, leave comments, and track changes through revision history.  
+- Create tasks linked to documents or compliance items for better tracking.
+
+---
+
+### AI Edit
+
+Highlight text, right-click, and select AI Edit to modify content dynamically.  
+Use tools like Internet, Pursuit, or Organization for targeted assistance.
+
+---
+
+## Best Practices
+
+### Maximize AI Effectiveness
+
+- Provide clear and concise prompts.  
+- Keep your profile and files up to date.
+
+---
+
+### Utilize Shortcuts
+
+- **Formatting**: Cmd/Ctrl + B/I/U for bold, italic, or underline.  
+- **AI Editor**: Cmd/Ctrl + K to quickly access the AI editor.
+
+---
+
+### Focus Options
+
+Files, Current Document, or Internet can be prioritized during AI interaction for faster results.
+
+---
+
+## Support
+
+If you have additional questions or encounter any issues, please contact our support team via the **Help** option in the FelixFusion platform or email us at **support@felixfusion.ai**.
